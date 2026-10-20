@@ -1,7 +1,15 @@
 # 🌾 India Harvest — Crop Production Analysis
 
-An interactive agricultural data visualization website that explores India's crop production trends from 1997 to 2021.
+An interactive project exploring India's agricultural crop production from 1997 to 2021. The website presents the project overview, two Tableau Public dashboards, and farm-planning tools.
 
+Website features
+
+- Responsive home page with project overview and analysis highlights.
+- Two interactive Tableau Public views on the separate dashboard page.
+- Farm weather lookup by Indian city, district, or PIN code.
+- Farm-area input and a practical season-preparation checklist.
+- Current weather details for temperature, humidity, precipitation, and wind. Weather refreshes every 15 minutes while the page is open.
+  
 ## 📌 Project Overview
 
 India Harvest is a data visualization project designed to analyze agricultural crop production across Indian states and years.
@@ -51,6 +59,28 @@ INDIA-S-AGRICULTURAL-CROP-PRODUCTION/
 Visit the deployed project:
 
 https://india-s-agricultural-crop-productio-bice.vercel.app/
+
+Dashboards
+
+- [Production overview](https://public.tableau.com/views/Agricultural_Crop_Production_Backup/Dashboard1?:showVizHome=no)
+- [Crop production analysis](https://public.tableau.com/views/IndiasAgriculturalCropProductionAnalysis_Dashboard/Dashboard1?:showVizHome=no
+
+Both dashboards are hosted on Tableau Public and require an internet connection.
+
+Project files
+
+- `index.html` — home page and farm tools
+- `dashboard.html` — switchable Tableau dashboards
+- `styles.css` — site styles and responsive layout
+- `script.js` — navigation, animation, dashboard switching, and weather lookup
+- `wheat-hero.png` — home-page hero image
+- `field-hero.png` — additional generated agricultural image
+
+Weather data
+
+Weather lookup uses the location entered on the home page and retrieves current model-based conditions from Open-Meteo. These conditions can differ from readings at the exact farm location. Location search is limited to India.
+
+Weather data: [Open-Meteo](https://open-meteo.com/).
 
 ## 📊 Interactive Dashboard
 
