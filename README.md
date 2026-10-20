@@ -16,14 +16,17 @@ India Harvest is a data visualization project designed to analyze agricultural c
 
 The project helps users explore crop production, cultivated area, agricultural yield, and state-wise agricultural trends through interactive charts, maps, and dashboards.
 
-## 🎯 Objectives
+##🎯 Project Objectives
 
-- Analyze India's agricultural crop production from 1997 to 2021.
-- Compare agricultural production across Indian states.
-- Understand cultivated area and crop yield trends.
-- Visualize agricultural data through interactive charts and maps.
-- Present agricultural insights through a user-friendly website.
-
+- Analyze agricultural production trends across agricultural years.
+- Compare cultivated areas across different crops and Indian states.
+- Identify leading agricultural-producing states.
+- Study agricultural production across different seasons.
+- Analyze agricultural yield trends.
+- Create interactive Tableau visualizations, dashboards, and stories.
+- Develop a user-friendly website to display the analysis.
+- Deploy the website online for easy access.
+  
 ## ✨ Features
 
 - 📊 Interactive Tableau dashboard
@@ -33,14 +36,98 @@ The project helps users explore crop production, cultivated area, agricultural y
 - 🌾 Crop-wise production comparisons
 - 💻 Responsive website interface
 
+  📊 Dataset Information
+
+The project uses an agricultural crop production dataset containing information about India's agricultural activities.
+
+| Attribute | Details |
+|---|---|
+| States and Union Territories | 36 |
+| Districts | 729 |
+| Crop Categories | 57 |
+| Agricultural Years | 1997–98 to 2020–21 |
+| Seasons | 6 |
+| Main Measures | Area, Production, Yield |
+| Production Units | Tonnes, Bales, Nuts |
+| Records | Approximately 345,408, including the header |
+
+ Dataset Fields
+
+- State
+- District
+- Crop
+- Year
+- Season
+- Area
+- Area Units
+- Production
+- Production Units
+- Yield
+
 ## 🛠️ Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript
-- Tableau Public
-- GitHub
-- Vercel
+| Technology | Purpose |
+|---|---|
+| Python | Backend development |
+| Flask | Web application framework |
+| HTML5 | Website structure |
+| CSS3 | Website styling |
+| Tableau Desktop | Data analysis and visualization |
+| Tableau Public | Publishing interactive dashboards and stories |
+| CSV / Excel | Dataset storage and preparation |
+| GitHub | Source code management |
+| Vercel | Website deployment |
+
+📈 Tableau Visualizations
+
+The project includes the following visualizations:
+
+1. Total Production — KPI Card
+2. Total Yield — KPI Card
+3. Trend of Agricultural Yield — Line Chart
+4. State-wise Agricultural Production — India Map
+5. Comparison of Cultivated Area by Crop — Horizontal Bar Chart
+6. State-wise Cultivated Area — Treemap / Bar Chart
+7. Leading States by Agricultural Production — Packed Bubble Chart
+8. Year-wise Total Agricultural Production — Line Chart
+9. Production Distribution by Unit Type — Pie Chart
+10. Season-wise Agricultural Production Share — Pie Chart
+
+📊 Interactive Dashboard
+
+The Tableau Dashboard combines multiple visualizations into a single interface.
+
+### Dashboard Features
+
+- State-wise agricultural production mapping
+- Cultivated area comparisons
+- Leading states by production
+- Year-wise production trends
+- Agricultural yield analysis
+- Production distribution across seasons
+- Production-unit comparisons
+- KPI cards for production and yield
+Key Dashboard Values
+
+| Metric | Value |
+|---|---:|
+| Total Yield | 27.43M |
+| Total Production | 330,997.84M units |
+
+*These values represent the aggregations displayed in the Tableau Dashboard.*
+
+## 📖 Tableau Story
+
+The project includes a Tableau Story with eight story points:
+
+1. Agricultural Performance
+2. Geographic Distribution
+3. Cultivated Area Across Indian States
+4. Leading States by Agricultural Production
+5. Year-wise Agricultural Production
+6. Trend of Agricultural Yield
+7. Season-wise Agricultural Production
+8. Production Distribution by Unit Type
 
 ## 📂 Project Structure
 
@@ -82,6 +169,31 @@ Weather lookup uses the location entered on the home page and retrieves current 
 
 Weather data: [Open-Meteo](https://open-meteo.com/).
 
+🧹 Data Preparation
+
+The dataset was prepared for analysis by:
+
+- Standardizing field names.
+- Converting Area, Production, and Yield into numeric measures.
+- Treating State, District, Crop, Season, and unit fields as categorical dimensions.
+- Checking for missing and blank values.
+- Reviewing negative and zero-production records.
+- Reviewing potential outliers before visualization.
+
+Production values may use different units, including Tonnes, Bales, and Nuts. These units should not be treated as directly equivalent.
+
+## ❓ Business Questions
+
+The project investigates the following questions:
+
+- How does agricultural production change across years?
+- How does agricultural yield vary over time?
+- Which states have the highest recorded agricultural production?
+- Which crops occupy the largest cultivated areas?
+- How does cultivated area vary among states?
+- How is production distributed across seasons?
+- How is production distributed across different unit types?
+  
 ## 📊 Interactive Dashboard
 
 The project uses Tableau Public to present interactive agricultural data visualizations.
@@ -96,6 +208,18 @@ Explore the dashboard through the website's Dashboard section.
 - Agricultural yield analysis
 - Year-wise production trends
 - Leading states in agricultural production
+
+  🔮 Future Scope
+
+Potential improvements include:
+
+- Adding more recent agricultural data.
+- Including crop price and market-value analysis.
+- Integrating rainfall and weather datasets.
+- Adding more detailed crop-level comparisons.
+- Improving dashboard filters and interactions.
+- Introducing predictive models for agricultural production.
+- Automating dataset updates.
 
 ## 🚀 Deployment
 
