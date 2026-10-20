@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3e9">
+  <meta name="description" content="Explore India's agricultural crop production from 1997 to 2021 through an interactive Tableau dashboard.">
+  <title>India Harvest — Crop Production Analysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="India Harvest home"><span class="brand-mark">✳</span><span>FIELDNOTES <small>AGRICULTURE / INDIA</small></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#mission">Project</a><a href="dashboard.html">Dashboards</a><a href="#highlights">Analysis</a><a href="#farm-tools">Farm tools</a><a href="#contact">Contact</a><a class="nav-cta" href="dashboard.html">Explore data <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy" data-reveal="hero">
+        <div class="hero-eyebrow"><span></span> INDIA · CROP PRODUCTION · 1997—2021</div>
+        <h1>INDIA'S AGRICULTURAL<br>CROP PRODUCTION</h1>
+        <p class="hero-lede">Explore crop production, cultivated area and yield across India's states, seasons and agricultural years.</p>
+        <a class="button hero-read-more" href="#mission">READ MORE <span>↓</span></a>
+      </div>
+      <a class="hero-arrow hero-arrow-left" href="#mission" aria-label="Explore the project">‹</a>
+      <a class="hero-arrow hero-arrow-right" href="dashboard.html" aria-label="Open dashboards">›</a>
+    </section>
+
+    <section class="mission" id="mission">
+      <svg class="world-map" viewBox="0 0 1000 360" aria-hidden="true"><path d="M75 96 116 64l56-12 37 18 36 5 17 31-16 19-35 2-17 23-31 8-18 33-20-10-7-34-25-17-34 5-24-19-26-2-14-18Zm145 91 31 6 20 25 27 16 17 36-10 55-18 24-14-40-22-28-8-34-29-24Zm145-146 41-15 36 9 24-8 25 15 26-4 31 21 29-5 38 13 36-7 48 27-8 21-35 1-16 17-40-9-19 17-34-5-15 22-37-5-17-20-25 4-24-19-34 5-24-21-32 3-20-20-27-5Zm111 105 30-10 36 8 24 24-8 31-21 16-5 34-23 35-17 1-12-29-18-29 5-37-11-24Zm182 72 34-9 39 8 16 22-15 19-39-2-28-14Zm-15-116 17-9 15 11-5 23-16 4-12-14Z"/></svg>
+      <div class="mission-inner" data-reveal>
+        <div class="mission-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="21"/><path d="M24 36V17m0 12c-7 0-11-4-11-10 7 0 11 4 11 10Zm0-7c0-7 4-11 10-11 0 7-4 11-10 11Zm-7 14h14"/></svg></div>
+        <h2>AGRICULTURE IS SHAPING INDIA'S FUTURE</h2>
+        <p class="mission-subtitle">A clearer view of our changing harvest.</p>
+        <p class="mission-copy">This project explores how crops, cultivated land and agricultural yield change across India from 1997 to 2021.</p>
+        <div class="mission-actions"><a class="button button-outline" href="#highlights">ABOUT THE PROJECT</a><a class="button button-green" href="dashboard.html">EXPLORE DASHBOARDS <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="highlights" id="highlights" aria-label="Project analysis areas">
+      <article class="highlight" data-reveal><span class="highlight-icon" aria-hidden="true">⌕</span><h3>Crop production</h3><p>Explore how production varies across the crops in the dataset.</p></article>
+      <article class="highlight" data-reveal><span class="highlight-icon" aria-hidden="true">⌖</span><h3>State comparisons</h3><p>Compare agricultural production across India's states and districts.</p></article>
+      <article class="highlight" data-reveal><span class="highlight-icon" aria-hidden="true">♧</span><h3>Cultivated area</h3><p>Follow cultivated area alongside crop and regional selections.</p></article>
+      <article class="highlight" data-reveal><span class="highlight-icon" aria-hidden="true">◷</span><h3>Year-wise trends</h3><p>Explore seasonal and agricultural-year patterns from 1997 to 2021.</p></article>
+    </section>
+
+    <section class="farm-tools" id="farm-tools">
+      <div class="farm-tools-heading" data-reveal><span class="farm-kicker">FOR FARMERS</span><h2>A practical view of your farm.</h2><p>Enter a town, district or PIN code to check current local weather. Add your farm area to keep the details together.</p></div>
+      <div class="farm-tools-grid">
+        <div class="farm-weather-card" data-reveal>
+          <div class="weather-card-top"><div><span class="live-dot"></span><span class="weather-label">LOCAL WEATHER</span></div><span class="weather-provider">CURRENT CONDITIONS</span></div>
+          <form id="farmWeatherForm" class="farm-weather-form">
+            <label for="farmLocation">Farm location</label>
+            <div class="location-input-row"><input id="farmLocation" name="location" type="search" placeholder="City, district or PIN code" autocomplete="address-level2" required><button type="submit" aria-label="Get current weather">↗</button></div>
+            <div class="area-input-row"><label for="farmArea">Farm area</label><div class="area-control"><input id="farmArea" name="area" type="number" min="0" step="0.01" placeholder="Enter area"><select id="farmAreaUnit" aria-label="Farm area unit"><option value="acres">acres</option><option value="hectares">hectares</option></select></div></div>
+            <p class="form-hint" id="weatherStatus" aria-live="polite">Enter your farm location to get current weather.</p>
+          </form>
+          <div class="weather-result" id="weatherResult" aria-live="polite">
+            <div class="weather-main"><div><span class="weather-condition" id="weatherCondition">Awaiting location</span><strong class="temperature" id="weatherTemperature">--<sup>°C</sup></strong><span class="weather-place" id="weatherPlace">Set your farm location above</span></div><div class="weather-sun">☼</div></div>
+            <div class="weather-metrics"><div><span>HUMIDITY</span><strong id="weatherHumidity">—</strong></div><div><span>RAINFALL</span><strong id="weatherRain">—</strong></div><div><span>WIND</span><strong id="weatherWind">—</strong></div></div>
+            <div class="weather-area"><span>YOUR FARM AREA</span><strong id="farmAreaDisplay">Not entered</strong></div>
+            <small class="weather-updated" id="weatherUpdated">Weather data will appear here.</small>
+          </div>
+          <p class="weather-note">Weather is model-based and may differ from conditions at your exact field location.</p>
+        </div>
+        <div class="farm-checklist" data-reveal>
+          <span class="farm-kicker">SEASON PREPARATION</span><h3>Farm readiness checklist</h3><p class="checklist-intro">A few essentials to review before and during the growing season.</p>
+          <ul>
+            <li><span class="check-icon">✓</span><span><strong>Check soil health</strong><small>Use a soil test to guide nutrient planning.</small></span></li>
+            <li><span class="check-icon">✓</span><span><strong>Choose suitable seeds</strong><small>Consider local season, soil and crop guidance.</small></span></li>
+            <li><span class="check-icon">✓</span><span><strong>Plan water and drainage</strong><small>Review irrigation access and field drainage.</small></span></li>
+            <li><span class="check-icon">✓</span><span><strong>Monitor crop health</strong><small>Check regularly for weeds, pests and disease.</small></span></li>
+            <li><span class="check-icon">✓</span><span><strong>Prepare storage and market plans</strong><small>Think ahead about harvest handling and sale.</small></span></li>
+          </ul>
+          <p class="checklist-note">For crop-specific decisions, follow your local agricultural extension or KVK guidance.</p>
+        </div>
+      </div>
+      <p class="weather-credit">Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-details">
+      <div class="footer-project"><a class="brand footer-brand" href="#home"><span class="brand-mark">✳</span><span>FIELDNOTES</span></a><p>India's Agricultural Crop Production Analysis<br><span>Interactive study · 1997—2021</span></p></div>
+      <div class="footer-column"><span class="footer-label">PROJECT BY</span><strong>Vedant Padmawar</strong><span>Indira College of Engineering and Management, Pune</span></div>
+      <div class="footer-column"><span class="footer-label">CONTACT</span><a href="tel:+919561258843">9561258843</a><a href="mailto:vedantpadmawar23@gmail.com">vedantpadmawar23@gmail.com</a></div>
+      <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    </div>
+    <div class="footer-rule"></div><small>PROJECT PRESENTATION · TABLEAU PUBLIC</small><small class="footer-right">BUILT FOR CURIOUS MINDS</small>
+  </footer>
+</body>
+</html>

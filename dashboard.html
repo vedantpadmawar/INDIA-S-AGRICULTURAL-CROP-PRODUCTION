@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f0">
+  <meta name="description" content="Explore two interactive Tableau dashboards for India's Agricultural Crop Production Analysis, 1997–2021.">
+  <title>Agriculture Dashboards — India Crop Production</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Back to project home"><span class="brand-mark">✳</span><span>FIELDNOTES <small>AGRICULTURE / INDIA</small></span></a>
+    <nav class="nav-links" aria-label="Dashboard navigation"><a href="index.html">← Back to project</a></nav>
+  </header>
+  <main>
+    <section class="dashboard-section standalone-dashboard">
+      <div class="dashboard-heading"><div><div class="section-kicker">INDIA · AGRICULTURE · 1997—2021</div><h1>Explore the <em>dashboards.</em></h1></div><p>Choose a view, then use its Tableau controls to explore crops, seasons, years and regions.</p></div>
+      <div class="dashboard-tabs" role="tablist" aria-label="Agricultural dashboards">
+        <button class="dashboard-tab active" id="tab-production" type="button" role="tab" aria-selected="true" aria-controls="panel-production" data-dashboard-tab="panel-production">Production overview</button>
+        <button class="dashboard-tab" id="tab-analysis" type="button" role="tab" aria-selected="false" aria-controls="panel-analysis" data-dashboard-tab="panel-analysis">Crop production analysis</button>
+      </div>
+      <div class="dashboard-frame">
+        <section class="dashboard-panel active" id="panel-production" role="tabpanel" aria-labelledby="tab-production">
+          <div class="dashboard-topline"><span><i></i> PRODUCTION OVERVIEW · TABLEAU PUBLIC</span><span>INDIA / 1997—2021</span></div>
+          <div class="viz-wrap">
+            <div class="viz-placeholder" id="placeholder-production" hidden><div class="placeholder-icon">↗</div><h2>Dashboard unavailable</h2><p>The embedded visualization could not be loaded. You can open it directly on Tableau Public.</p><a class="tableau-fallback" href="https://public.tableau.com/views/Agricultural_Crop_Production_Backup/Dashboard1?:showVizHome=no" target="_blank" rel="noopener">Open dashboard on Tableau <span>↗</span></a></div>
+            <tableau-viz id="viz-production" src="https://public.tableau.com/views/Agricultural_Crop_Production_Backup/Dashboard1?:showVizHome=no" toolbar="bottom" hide-tabs width="100%" height="850"></tableau-viz>
+          </div>
+        </section>
+        <section class="dashboard-panel" id="panel-analysis" role="tabpanel" aria-labelledby="tab-analysis" hidden>
+          <div class="dashboard-topline"><span><i></i> CROP PRODUCTION ANALYSIS · TABLEAU PUBLIC</span><span>INDIA / 1997—2021</span></div>
+          <div class="viz-wrap">
+            <div class="viz-placeholder" id="placeholder-analysis" hidden><div class="placeholder-icon">↗</div><h2>Dashboard unavailable</h2><p>The embedded visualization could not be loaded. You can open it directly on Tableau Public.</p><a class="tableau-fallback" href="https://public.tableau.com/views/IndiasAgriculturalCropProductionAnalysis_Dashboard/Dashboard1?:showVizHome=no" target="_blank" rel="noopener">Open dashboard on Tableau <span>↗</span></a></div>
+            <tableau-viz id="viz-analysis" data-src="https://public.tableau.com/views/IndiasAgriculturalCropProductionAnalysis_Dashboard/Dashboard1?:showVizHome=no" toolbar="bottom" hide-tabs width="100%" height="850"></tableau-viz>
+          </div>
+        </section>
+      </div>
+      <div class="dashboard-bottom dashboard-frame-bottom"><span>Visualization hosted by Tableau Public</span><a id="openTableau" href="https://public.tableau.com/views/Agricultural_Crop_Production_Backup/Dashboard1?:showVizHome=no" target="_blank" rel="noopener">Open selected dashboard ↗</a></div>
+    </section>
+  </main>
+</body>
+</html>
