@@ -63,7 +63,7 @@ https://india-s-agricultural-crop-productio-bice.vercel.app/
 Dashboards
 
 - [Production overview](https://public.tableau.com/views/Agricultural_Crop_Production_Backup/Dashboard1?:showVizHome=no)
-- [Crop production analysis](https://public.tableau.com/views/IndiasAgriculturalCropProductionAnalysis_Dashboard/Dashboard1?:showVizHome=no
+- [Crop production analysis](https://public.tableau.com/views/IndiasAgriculturalCropProductionAnalysis_Dashboard/Dashboard1?:showVizHome=no)
 
 Both dashboards are hosted on Tableau Public and require an internet connection.
 
